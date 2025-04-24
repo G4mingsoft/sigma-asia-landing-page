@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiGMA Asia 2025 - iGaming Summit in Manila</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; }
+
+    .hero {
+      background: url('https://sigma.world/wp-content/uploads/2023/12/SIGMA-Asia-2024-1920x800-1.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero-content p { font-size: 1.5rem; margin-bottom: 2rem; }
+
+    .btn-primary {
+      background-color: #e60000;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover { background-color: #c00000; }
+
+    section { padding: 4rem 2rem; text-align: center; }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .stat h3 { font-size: 2rem; color: #e60000; }
+
+    .registration form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .registration input, .registration select {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .registration label {
+      font-weight: bold;
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    .registration button {
+      padding: 0.75rem;
+      background-color: #e60000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .registration button:hover { background-color: #c00000; }
+
+    .sponsor-logos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .attendees-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .attendee {
+      width: 150px;
+      height: 80px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    #countdown-timer {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    #countdown-timer div {
+      text-align: center;
+    }
+
+    #countdown-timer span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 2rem auto;
+      max-width: 600px;
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 { font-size: 2rem; }
+      .hero-content p { font-size: 1rem; }
+      .stats { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>SiGMA Asia 2025 - The Ultimate iGaming Experience</h1>
+    <p>June 1–4, 2025 | SMX Convention Center, Manila</p>
+    <a href="#registration" class="btn-primary">Register Now for SiGMA Asia</a>
+  </div>
+</section>
+
+<section class="about">
+  <h2>Welcome to SiGMA Asia Summit 2025</h2>
+  <p>Join thousands of industry leaders, innovators, and entrepreneurs at SiGMA Asia in Manila – the premier hub for the iGaming world in the region.</p>
+</section>
+
+<section class="stats">
+  <div class="stat"><h3>20K+</h3><p>Delegates</p></div>
+  <div class="stat"><h3>3.8K</h3><p>Operators</p></div>
+  <div class="stat"><h3>350+</h3><p>Speakers</p></div>
+</section>
+
+<section class="early-bird">
+  <h2>🎟️ Early Bird Tickets Available Now!</h2>
+  <p>Secure your spot at SiGMA Asia 2025 and enjoy exclusive discounts. Don’t miss out!</p>
+  <a href="#registration" class="btn-primary">Grab Early Bird Offer</a>
+</section>
+
+<section class="countdown">
+  <h2>⏳ Countdown to SiGMA Asia 2025</h2>
+  <div id="countdown-timer">
+    <div><span id="days">00</span><p>Days</p></div>
+    <div><span id="hours">00</span><p>Hours</p></div>
+    <div><span id="minutes">00</span><p>Minutes</p></div>
+    <div><span id="seconds">00</span><p>Seconds</p></div>
+  </div>
+</section>
+
+<section class="registration" id="registration">
+  <h2>Secure Your Spot</h2>
+  <form id="registration-form" action="#" method="post">
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="text" name="company" placeholder="Company (optional)" />
+
+    <label for="contact-method">Preferred Contact Method:</label>
+    <select id="contact-method" name="contact_method" required>
+      <option value="">--Select--</option>
+      <option value="whatsapp">WhatsApp</option>
+      <option value="telegram">Telegram</option>
+    </select>
+    <input type="text" id="contact-detail" name="contact_detail" placeholder="Enter your contact number" required />
+
+    <label for="user-type">I am an:</label>
+    <select id="user-type" name="user_type" required>
+      <option value="">--Select--</option>
+      <option value="affiliate">Affiliate</option>
+      <option value="operator">Operator</option>
+    </select>
+
+    <div id="operator-info" style="display: none; margin-top: 1rem;">
+      <p>As an Operator, please proceed to payment to complete your registration:</p>
+      <a href="https://tickets.sigma.world/sigma-asia-2025" target="_blank" class="btn-primary">Proceed to Payment</a>
+    </div>
+
+    <button type="submit" id="submit-button">Submit Registration</button>
+  </form>
+</section>
+
+<section class="sponsors">
+  <h2>Our Sponsors & Partners</h2>
+  <div class="sponsor-logos">
+    <div class="attendee">BetSoft</div>
+    <div class="attendee">SBOBET</div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>What Industry Leaders Say</h2>
+  <blockquote>“SiGMA Asia is where iGaming comes to life.” — Alejandro H. Tengco, PAGCOR</blockquote>
+</section>
+
+<section class="attendees">
+  <h2>Our Attendees</h2>
+  <div class="attendees-grid">
+    <div class="attendee">BetSoft</div>
+    <div class="attendee">Pragmatic Play</div>
+    <div class="attendee">EveryMatrix</div>
+  </div>
+</section>
+
+<section class="location">
+  <h2>Event Location</h2>
+  <p>SMX Convention Center, Manila, Philippines<br>June 1–4, 2025</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 SiGMA Asia. Keywords: sigma asia, sigma manila, sigma asia manila, igaming</p>
+</footer>
+
+<script>
+  const eventDate = new Date(\"June 1, 2025 09:00:00\").getTime();
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    document.getElementById(\"days\").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById(\"hours\").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById(\"minutes\").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    document.getElementById(\"seconds\").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+  }, 1000);
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const userTypeSelect = document.getElementById('user-type');
+    const operatorInfo = document.getElementById('operator-info');
+    const submitButton = document.getElementById('submit-button');
+    const registrationForm = document.getElementById('registration-form');
+
+    userTypeSelect.addEventListener('change', function () {
+      if (this.value === 'operator') {
+        operatorInfo.style.display = 'block';
+        submitButton.disabled = true;
+      } else {
+        operatorInfo.style.display = 'none';
+        submitButton.disabled = false;
+      }
+    });
+
+    registrationForm.addEventListener('submit', function (e) {
+      if (userTypeSelect.value === 'operator') {
+        e.preventDefault();
+        alert('Please proceed to payment to complete your registration.');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
